@@ -14,15 +14,11 @@ def chat_gpt(data):
     openai.api_key = ''
 
     prompt = """
-        You are a music aficionado seeking album recommendations based on scores. Below is a list of albums I have listened to along with their artist and scores I have given them. Please provide recommendations for albums that are not listed below, that you think I would enjoy.
+        I want you to act as a music connoisseur. I will provide you a list of albums that I have listened to. Each album will have a score out of 100 that I have given to it. I want you to recommend me a handful of albums you think I would enjoy based on the albums I have listened to and the scores I have given them. Below is the list of albums.
 
         List of Albums:
         """ + data + """
-
-        Recommendation Criteria: Please suggest albums with scores higher than 50. Feel free to consider the artist's style, genre, and any other relevant factors when making recommendations.
-
-        Please output your recommendations in numbered ascending order where the first recommendation is the album you think I would enjoy the most.
-    """
+        """
 
     
     response = openai.Completion.create(
