@@ -14,7 +14,7 @@ def chat_gpt(data):
     openai.api_key = ''
 
     prompt = """
-        I want you to act as a music connoisseur. I will provide you a list of albums that I have listened to. Each album will have a score out of 100 that I have given to it. I want you to recommend me a handful of albums you think I would enjoy based on the albums I have listened to and the scores I have given them. Below is the list of albums.
+        I want you to act as a music connoisseur. I will provide you a list of albums that I have listened to. Each album will have a score out of 100 that I have given to it. I want you to recommend me a handful of albums you think I would enjoy based on the albums I have listened to and the scores I have given them. Do not recommend albums that are in the below list. Below is the list of albums.
 
         List of Albums:
         """ + data + """
